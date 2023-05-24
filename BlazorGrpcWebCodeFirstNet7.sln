@@ -9,6 +9,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorGrpcWebCodeFirstNet7.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorGrpcWebCodeFirstNet7.Shared", "BlazorGrpcWebCodeFirstNet7\Shared\BlazorGrpcWebCodeFirstNet7.Shared.csproj", "{851946EE-F043-46D3-B0A6-30A6879D05C2}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BA07AD1E-016D-4BFE-83D6-8BC5A4F08F76}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
