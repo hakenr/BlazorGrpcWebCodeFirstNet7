@@ -1,4 +1,6 @@
+using BlazorGrpcWebCodeFirstNet7.Server.Facades;
 using Microsoft.AspNetCore.ResponseCompression;
+using ProtoBuf.Grpc.Server;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,6 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
+builder.Services.AddCodeFirstGrpc(config => { config.ResponseCompressionLevel = System.IO.Compression.CompressionLevel.Optimal; });
 
 var app = builder.Build();
 
@@ -27,7 +30,8 @@ app.UseBlazorFrameworkFiles();
 app.UseStaticFiles();
 
 app.UseRouting();
-
+app.UseGrpcWeb(new GrpcWebOptions() { DefaultEnabled = true });
+app.MapGrpcService<WeatherForecastFacade>();
 
 app.MapRazorPages();
 app.MapControllers();
