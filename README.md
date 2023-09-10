@@ -2,7 +2,10 @@
 
 gRPC is a phenomenon of our time. This modern and performance-efficient protocol is rapidly spreading, and today we will show how to use it for communication between the Blazor WebAssembly front-end and the ASP.NET Core backend (host):
 
-We will efficiently use the possibilities of sharing code between the server and client part. We will use the code-first arrangement and put the "contract" (interface for the called service and data object definitions) into the assembly shared by both the server and client parts of the solution. To overcome browser limitations, we will use the gRPC-Web extension. We will show the entire implementation on a simple example – we will use the default Blazor WebAssembly App template from Visual Studio (ASP.NET Core hosted, version of the .NET7 template) and we will convert the prepared Fetch data example, which uses the REST API in this template, to a gRPC-Web call using code-first.
+1. We will efficiently use the possibilities of sharing code between the server and client part. We will use the code-first arrangement and put the "contract" (interface for the called service and data object definitions) into the assembly shared by both the server and client parts of the solution.
+1. To overcome browser limitations, we will use the gRPC-Web extension. 
+
+We will show the entire implementation on a simple example – we will use the default Blazor WebAssembly App template from Visual Studio (ASP.NET Core hosted, version of the .NET7 template) and we will convert the prepared Fetch data example, which uses the REST API in this template, to a gRPC-Web call using code-first.
 
 Let's do this, it's just a few steps:
 
